@@ -48,7 +48,7 @@ export default (props: Props) => {
             <IconEnv />
             <span>请注意:</span>
           </div>
-          <p class="my-2 leading-normal text-sm op-50 dark:op-60">请不要输入个人信息。此外，如果佛陀回以缄默，如果有关于佛教方面的任何不准确之处，请宽容地接受。<br>无论如何，请保持欢喜心、平常心、清静心，以发出离心、慈悲心、菩提心。</p>
+          <p class="my-2 leading-normal text-sm op-50 dark:op-60">请不要输入个人信息。此外，如果佛陀回以缄默，如果有关于佛教方面的任何不准确之处，请宽容地接受。无论如何，请保持欢喜心、平常心、清静心，以发出离心、慈悲心、菩提心。</p>
           <div>
             <textarea
               ref={systemInputRef!}
