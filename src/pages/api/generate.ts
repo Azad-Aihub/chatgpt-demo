@@ -42,15 +42,7 @@ export const post: APIRoute = async(context) => {
 
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   // @ts-expect-error
-  const response = await fetch(`${baseUrl}/v1/chat/completions`, initOptions).catch((err: Error) => {
-    console.error(err)
-    return new Response(JSON.stringify({
-      error: {
-        code: err.name,
-        message: err.message,
-      },
-    }), { status: 500 })
-  }) as Response
+
   
   const response = await api.sendMessage(message, {
       ...options,
@@ -58,7 +50,7 @@ export const post: APIRoute = async(context) => {
       onProgress: (partialResponse) => {
         process?.(partialResponse)
       },
-    })
+    }) as Response
 
   return parseOpenAIStream(response) as Response
 }
